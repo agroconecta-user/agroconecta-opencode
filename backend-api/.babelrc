@@ -1,0 +1,27 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "targets": {
+          "node": "20"
+        }
+      }
+    ],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    "add-import-extension",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@/": "./src/"
+        },
+        "extensions": [".js", ".ts", ".json"]
+      }
+    ]
+  ]
+}
